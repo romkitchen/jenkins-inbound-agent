@@ -27,11 +27,16 @@ RUN apt-get update \
                        liblz4-tool libncurses5 libncurses5-dev libsdl1.2-dev \
                        libssl-dev libxml2 libxml2-utils lzop pngcrush rsync \
                        schedtool squashfs-tools xsltproc zip zlib1g-dev \
-                       libwxgtk3.0-dev git curl rsync patch wget
+                       libwxgtk3.0-dev git curl rsync patch wget unzip brotli \
+                       python python-protobuf
 
 # Install repo script
 RUN curl -o /usr/local/bin/repo https://storage.googleapis.com/git-repo-downloads/repo \
   && chmod a+x /usr/local/bin/repo
+
+# Install sdat2img
+RUN curl -o /usr/local/bin/sdat2img https://raw.githubusercontent.com/xpirt/sdat2img/master/sdat2img.py \
+  && chmod a+x /usr/local/bin/sdat2img
 
 # Jenkins Agent is run with user `jenkins`, uid = 1000
 # If you bind mount a volume from the host or a data container,
