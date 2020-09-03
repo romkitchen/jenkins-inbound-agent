@@ -28,7 +28,7 @@ RUN apt-get update \
                        libssl-dev libxml2 libxml2-utils lzop pngcrush rsync \
                        schedtool squashfs-tools xsltproc zip zlib1g-dev \
                        libwxgtk3.0-dev git curl rsync patch wget unzip brotli \
-                       python python-protobuf p7zip
+                       python python-protobuf p7zip-full
 
 # Install repo script
 RUN curl -o /usr/local/bin/repo https://storage.googleapis.com/git-repo-downloads/repo \
