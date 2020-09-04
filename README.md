@@ -12,7 +12,7 @@ See [Jenkins Distributed builds](https://wiki.jenkins-ci.org/display/JENKINS/Dis
 
 ## Running
 
-To run a Jenkins romkitchen agent you first need to ask for the `<URL>`, `<secret>` and `<name>` on our Discord server. The first start will take several hours (depending on your internet connection speed) as it's mirroring Android ROMs. So grab a beer and put your feet up.
+To run a Jenkins romkitchen agent you first need to ask for the `<URL>`, `<secret>` and `<name>` on our [Discord server](https://discord.gg/SU2twV). The first start will take several hours (depending on your internet connection speed) as it's mirroring Android ROMs. So grab a beer and put your feet up.
 
 ```
 docker run -dit \
