@@ -7,7 +7,7 @@ See [Jenkins Distributed builds](https://wiki.jenkins-ci.org/display/JENKINS/Dis
 ## Requirements
 
 * [Docker](https://www.docker.com)
-* At least 8 GB RAM
+* At least 6 GB RAM
 * At least 250 GB free disk space
 
 ## Running
