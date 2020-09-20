@@ -9,12 +9,16 @@ ARG CCACHE_SIZE=50G
 ARG REPO_INIT_BRANCH=lineage-16.0
 ARG REPO_INIT_URL=https://github.com/LineageOS/android.git
 ARG REPO_SYNC_THREADS=2
+ARG REPO_USER_EMAIL=jenkins@rom.kitchen
+ARG REPO_USER_NAME=Jenkins
 
 ENV AGENT_HOME $AGENT_HOME
 ENV CCACHE_SIZE $CCACHE_SIZE
 ENV REPO_INIT_BRANCH $REPO_INIT_BRANCH
 ENV REPO_INIT_URL $REPO_INIT_URL
 ENV REPO_SYNC_THREADS $REPO_SYNC_THREADS
+ENV REPO_USER_EMAIL $REPO_USER_EMAIL
+ENV REPO_USER_NAME $REPO_USER_NAME
 
 USER root
 
@@ -41,12 +45,16 @@ RUN curl -o /usr/local/bin/sdat2img https://raw.githubusercontent.com/xpirt/sdat
 # Jenkins Agent is run with user `jenkins`, uid = 1000
 # If you bind mount a volume from the host or a data container,
 # ensure you use the same uid
-RUN mkdir -p $AGENT_HOME \
-  && chown ${uid}:${gid} $AGENT_HOME
+RUN mkdir -p ${AGENT_HOME} \
+  && chown ${uid}:${gid} ${AGENT_HOME}
 
 # Mirrors directory is a volume, so configuration and build history
 # can be persisted and survive image upgrades
-VOLUME $AGENT_HOME
+VOLUME ${AGENT_HOME}
+
+# Set git identity
+RUN git config --global user.email ${REPO_USER_EMAIL}
+RUN git config --global user.name ${REPO_USER_NAME}
 
 COPY entrypoint.sh .
 RUN chmod a+x ./entrypoint.sh

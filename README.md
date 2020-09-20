@@ -33,3 +33,5 @@ Optional environment variables:
 * `REPO_INIT_BRANCH`: `lineage-16.0` Repository branch
 * `REPO_INIT_URL`: `https://github.com/LineageOS/android.git` Repository URL
 * `REPO_SYNC_THREADS`: `2` Split the sync across threads for faster completion. Make sure not to overwhelm your machine by leaving some CPU reserved for other tasks. To see the number of available CPUs, first run: `nproc --all`
+* `REPO_USER_EMAIL`: `jenkins@rom.kitchen` Git config `user.email`
+* `REPO_USER_NAME`: `Jenkins` Git config `user.name`
