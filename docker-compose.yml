@@ -2,5 +2,7 @@ version: '3.8'
 services:
   jenkins-inbound-agent:
     build: .
+    env_file:
+      - .env
     volumes:
-      - agent_home:/var/agent_home
+      - agent_workdir:/home/jenkins/agent
