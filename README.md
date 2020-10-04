@@ -8,7 +8,7 @@ See [Jenkins Distributed builds](https://wiki.jenkins-ci.org/display/JENKINS/Dis
 
 * [Docker](https://www.docker.com)
 * At least 6 GB RAM
-* At least 100 GB free disk space
+* At least 150 GB free disk space
 
 ## Usage
 
