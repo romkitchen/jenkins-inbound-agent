@@ -22,6 +22,8 @@ JENKINS_AGENT_NAME=...
 JENKINS_AGENT_WORKDIR=/home/jenkins/agent
 ```
 
+We highly recommend to limit the container resources. Please check out [this article](https://hostadvice.com/how-to/how-to-limit-a-docker-containers-resources-on-ubuntu-18-04/) for more information.
+
 Run the agent as a container:
 ```
 docker run -dit \
