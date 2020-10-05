@@ -18,7 +18,9 @@ fi
 # Create local manifest for proprietary blobs
 mkdir -p "$AGENT_WORKDIR/romkitchen/.repo/local_manifests"
 if ! -e "$AGENT_WORKDIR/romkitchen/.repo/local_manifests/romkitchen.xml"; then
-	tee "$AGENT_WORKDIR/romkitchen/.repo/local_manifests/romkitchen.xml" << '<?xml version="1.0" encoding="UTF-8"?><manifest/>'
+	tee "$AGENT_WORKDIR/romkitchen/.repo/local_manifests/romkitchen.xml" <<EOF
+<?xml version="1.0" encoding="UTF-8"?><manifest/>
+EOF
 fi
 
 # Run Jenkins Agent
