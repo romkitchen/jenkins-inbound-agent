@@ -20,13 +20,13 @@ USER root
 # Install ROM build dependencies
 RUN apt-get update \
   && apt-get upgrade -y \
-  && apt-get install -y bc bison brotli build-essential ccache curl diffstat \
-                       flex g++-multilib gcc-multilib git gnupg gperf \
+  && apt-get install -y aapt bc bison brotli build-essential ccache curl \
+                       diffstat flex g++-multilib gcc-multilib git gnupg gperf \
                        imagemagick lib32ncurses5-dev lib32readline-dev \
                        lib32z1-dev liblz4-tool libncurses5 libncurses5-dev \
                        libsdl1.2-dev libssl-dev libwxgtk3.0-dev libxml2 \
-                       libxml2-utils lzop p7zip-full patch pngcrush python \
-                       python-protobuf rsync schedtool splitpatch \
+                       libxml2-utils lzop p7zip-full patch pcregrep pngcrush \
+                       python python-protobuf rsync schedtool splitpatch \
                        squashfs-tools unzip wget xsltproc zip zlib1g-dev
 
 # Install repo script
